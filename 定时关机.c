@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+//#define _CRT_SECURE_NO_WARNINGS 1
 //#include <stdio.h>
 //#include <stdlib.h>
 //#include <windows.h>  // 用于Sleep()函数和system()函数
@@ -22,9 +22,6 @@
 //    }
 //
 //    seconds = minutes * 60;
-//
-//    printf("倒计时开始，将在%d分钟后关机...\n", minutes);
-//    printf("按Ctrl+C可以取消关机\n");
 //
 //    // 设置关机命令（/t参数指定倒计时时间，单位秒）
 //    char shutdownCmd[100];

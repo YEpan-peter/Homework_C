@@ -124,35 +124,74 @@
 //}
 
 
-
-#include <stdio.h>	
-
-int main() {
-	int n;
-	printf("请输入一个层数： ");
-	scanf("%d", &n);
-	int i, j, k;
-	for (i = 0; i < n; i++) {
-		if (i <=(n / 2)) {
-			for (j = ((n/2)-i); j > 0; j--) {
-				printf(" ");
-			}
-			for (k = (2*i)+1; k > 0; k--) {
-				printf("*");
-			}
-			printf("\n");
-			continue;
-		}else {
-			for (j =(i-(n/2)) ; j > 0; j--) {
-				printf(" ");
-			}
-			for (k =(2*(n-i) - 1); k > 0; k--) {
-				printf("*");
-			}
-			printf("\n");
-			continue;
-		}
-
-		return 0;
-	}
-}
+//
+//#include <stdio.h>	
+//
+//int main() {
+//	int n;
+//	printf("请输入一个层数： ");
+//	scanf("%d", &n);
+//	int i, j, k;
+//	for (i = 0; i < n; i++) {
+//		if (i <=(n / 2)) {
+//			for (j = ((n/2)-i); j > 0; j--) {
+//				printf(" ");
+//			}
+//			for (k = (2*i)+1; k > 0; k--) {
+//				printf("*");
+//			}
+//			printf("\n");
+//			continue;
+//		}else {
+//			for (j =(i-(n/2)) ; j > 0; j--) {
+//				printf(" ");
+//			}
+//			for (k =(2*(n-i) - 1); k > 0; k--) {
+//				printf("*");
+//			}
+//			printf("\n");
+//			continue;
+//		}
+//
+//		return 0;
+//	}
+//}
+//#include <stdio.h>
+//
+//void printDiamond(int n) {
+//    int i, j, space;
+//    for (i = 1; i <= n; i++) {
+//        for (space = 1; space <= n - i; space++) {
+//            printf(" ");
+//        }      
+//        for (j = 1; j <= 2 * i - 1; j++) {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//    for (i = n - 1; i >= 1; i--) {
+//        for (space = 1; space <= n - i; space++) {
+//            printf(" ");
+//        }
+//        for (j = 1; j <= 2 * i - 1; j++) {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//}
+//
+//int main() {
+//    int rows;
+//
+//    printf("请输入菱形的行数: ");
+//    scanf("%d", &rows);
+//
+//    if (rows % 2 == 0) {
+//        printf("输入应为奇数，已自动加1\n");
+//        rows++;
+//    }
+//
+//    printDiamond((rows + 1) / 2);
+//
+//    return 0;
+//}
