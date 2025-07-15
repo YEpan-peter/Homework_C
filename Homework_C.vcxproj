@@ -133,6 +133,8 @@
     <ClCompile Include="4.c" />
     <ClCompile Include="5.c" />
     <ClCompile Include="6.c" />
+    <ClCompile Include="guess.c" />
+    <ClCompile Include="lmitate.c" />
     <ClCompile Include="定时关机.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -36,5 +36,11 @@
     <ClCompile Include="6.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="lmitate.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="guess.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
