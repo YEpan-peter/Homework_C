@@ -284,5 +284,141 @@
 //    return 0;
 //}
 
+//
+//#include <stdio.h>
+//int main()
+//{
+//    char str1[] = "hello bit.";
+//    char str2[] = "hello bit.";
+//    char* str3 = "hello bit.";
+//    char* str4 = "hello bit.";
+//    if (str1 == str2)
+//        printf("str1 and str2 are same\n");
+//    else
+//        printf("str1 and str2 are not same\n");
+//
+//    if (str3 == str4)
+//        printf("str3 and str4 are same\n");
+//    else
+//        printf("str3 and str4 are not same\n");
+//
+//    return 0;
+//}
+//#include <stdio.h>
+//#include <stdbool.h>
+//#define ROWS 4
+//#define COLS 4
+//
+//bool searchMatrix(int matrix[ROWS][COLS], int target) {
+//    int row = 0;
+//    int col = COLS - 1;
+//
+//    while (row < ROWS && col >= 0) {
+//        if (matrix[row][col] == target) {
+//            return true;
+//        }
+//        else if (matrix[row][col] > target) {
+//            col--; // 向左移动
+//        }
+//        else {
+//            row++; // 向下移动
+//        }
+//    }
+//    return false;
+//}
+//
+//int main() {
+//    int matrix[ROWS][COLS] = {
+//        {1,  4,  7, 11},
+//        {2,  5,  8, 12},
+//        {3,  6,  9, 16},
+//        {10,13,14,17}
+//    };
+//    int target = 5;
+//
+//    if (searchMatrix(matrix, target)) {
+//        printf("Found!\n");
+//    }
+//    else {
+//        printf("Not Found!\n");
+//    }
+//
+//    return 0;
+//}
+
+//
+//#include <stdio.h>
+//#include <string.h>
+//
+//void leftRotate(char* str, int k) {
+//    int len = strlen(str);
+//    if (len == 0 || k <= 0 || k >= len) return;
+//
+//    char temp[1000];  // 假设最长不超过1000
+//    int i;
+//
+//    // 复制从第 k 位到末尾的字符到 temp
+//    for (i = 0; i < len - k; i++) {
+//        temp[i] = str[i + k];
+//    }
+//
+//    // 复制前 k 个字符接在后面
+//    for (int j = 0; j < k; j++) {
+//        temp[i++] = str[j];
+//    }
+//
+//    temp[i] = '\0';  // 结束符
+//
+//    // 将结果复制回原字符串
+//    strcpy(str, temp);
+//}
+//
+//int main() {
+//    char str1[100] = { 0 };
+//    int k;
+//	printf("Enter a string: ");
+//	scanf("%s", str1);
+//	printf("Enter the number of positions to rotate left: ");
+//	scanf("%d", &k);
+//	printf("Original string: %s\n", str1);  // 输出原字符串
+//	printf("Number of positions to rotate left: %d\n", k);
+//	// 调用左旋函数
+//    leftRotate(str1, k);
+//    printf("After left rotation: %s\n", str1);  // 输出: CDAB
+//
+//    return 0;
+//}
 
 
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdbool.h>
+//
+//// 判断s2是否是s1的旋转字符串
+//bool isRotation(const char* s1, const char* s2) {
+//    if (strlen(s1) != strlen(s2)) {
+//        return false;
+//    }
+//
+//    // 创建拼接字符串 s1 + s1
+//    char temp[2000];  // 假设原字符串最长不超过1000
+//    strcpy(temp, s1);
+//    strcat(temp, s1);
+//
+//    // 判断s2是否为temp的子串
+//    return strstr(temp, s2) != NULL;
+//}
+//
+//int main() {
+//    char s1[] = "AABCD";
+//    char s2[] = "BCDAA";
+//
+//    if (isRotation(s1, s2)) {
+//        printf("Yes, '%s' is a rotation of '%s'\n", s2, s1);
+//    }
+//    else {
+//        printf("No, '%s' is NOT a rotation of '%s'\n", s2, s1);
+//    }
+//
+//    return 0;
+//}

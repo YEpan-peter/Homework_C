@@ -123,52 +123,52 @@
 //
 //    return 0;
 //}
-#include <stdio.h>
-#include <stdlib.h>
-
-// 递归计算杨辉三角中第row行、第col列的值
-int pascalValue(int row, int col) {
-    // 每行的第一个和最后一个元素值为1
-    if (col == 0 || col == row) {
-        return 1;
-    }
-    // 其他元素等于上一行同列位置和前一列位置值之和
-    return pascalValue(row - 1, col - 1) + pascalValue(row - 1, col);
-}
-
-// 递归打印杨辉三角
-void printPascalTriangle(int n, int currentRow) {
-    if (currentRow >= n) {
-        return; // 递归基：所有行已打印
-    }
-
-    // 打印行前空格（居中对齐）
-    for (int i = 0; i < n - currentRow - 1; i++) {
-        printf("   ");
-    }
-
-    // 打印当前行的所有元素
-    for (int j = 0; j <= currentRow; j++) {
-        printf("%6d", pascalValue(currentRow, j));
-    }
-    printf("\n");
-
-    // 递归打印下一行
-    printPascalTriangle(n, currentRow + 1);
-}
-
-int main() {
-    int n;
-    printf("请输入杨辉三角的行数: ");
-    scanf("%d", &n);
-
-    if (n <= 0) {
-        printf("行数必须大于0！\n");
-        return 1;
-    }
-
-    printf("\n%d行杨辉三角:\n\n", n);
-    printPascalTriangle(n, 0);
-
-    return 0;
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//// 递归计算杨辉三角中第row行、第col列的值
+//int pascalValue(int row, int col) {
+//    // 每行的第一个和最后一个元素值为1
+//    if (col == 0 || col == row) {
+//        return 1;
+//    }
+//    // 其他元素等于上一行同列位置和前一列位置值之和
+//    return pascalValue(row - 1, col - 1) + pascalValue(row - 1, col);
+//}
+//
+//// 递归打印杨辉三角
+//void printPascalTriangle(int n, int currentRow) {
+//    if (currentRow >= n) {
+//        return; // 递归基：所有行已打印
+//    }
+//
+//    // 打印行前空格（居中对齐）
+//    for (int i = 0; i < n - currentRow - 1; i++) {
+//        printf("   ");
+//    }
+//
+//    // 打印当前行的所有元素
+//    for (int j = 0; j <= currentRow; j++) {
+//        printf("%6d", pascalValue(currentRow, j));
+//    }
+//    printf("\n");
+//
+//    // 递归打印下一行
+//    printPascalTriangle(n, currentRow + 1);
+//}
+//
+//int main() {
+//    int n;
+//    printf("请输入杨辉三角的行数: ");
+//    scanf("%d", &n);
+//
+//    if (n <= 0) {
+//        printf("行数必须大于0！\n");
+//        return 1;
+//    }
+//
+//    printf("\n%d行杨辉三角:\n\n", n);
+//    printPascalTriangle(n, 0);
+//
+//    return 0;
+//}
