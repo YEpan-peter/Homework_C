@@ -163,54 +163,55 @@
 //
 //    return 0;
 //}
-
-
-#include <stdio.h>
-#include <string.h>
-
-// 通用冒泡排序函数
-void bubble_sort(void* base, size_t num, size_t size,
-    int (*cmp)(const void*, const void*)) {
-    char* arr = (char*)base;
-    char* temp = malloc(size);  // 临时空间，用于交换元素
-    if (!temp) {
-        perror("malloc failed");
-        return;
-    }
-
-    for (size_t i = 0; i < num - 1; i++) {
-        for (size_t j = 0; j < num - i - 1; j++) {
-            char* elem1 = arr + j * size;
-            char* elem2 = arr + (j + 1) * size;
-            if (cmp(elem1, elem2) > 0) {
-                // 交换元素
-                memcpy(temp, elem1, size);
-                memcpy(elem1, elem2, size);
-                memcpy(elem2, temp, size);
-            }
-        }
-    }
-
-    free(temp);
-}
-
-int compare_int(const void* a, const void* b) {
-    int x = *(const int*)a;
-    int y = *(const int*)b;
-    return (x > y) - (x < y);
-}
-
-int main() {
-    int arr[] = { 5, 3, 8, 1, 9, 7 };
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    bubble_sort(arr, n, sizeof(int), compare_int);
-
-    printf("排序结果：");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-
-    return 0;
-}
+//
+//
+//// 通用冒泡排序函数
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//void bubble_sort(void* base, size_t num, size_t size,
+//    int (*cmp)(const void*, const void*)) {
+//    char* arr = (char*)base;
+//    void* temp = malloc(size);
+//    if (!temp) {
+//        perror("malloc failed");
+//        return;
+//    }
+//
+//    for (size_t i = 0; i < num - 1; i++) {
+//        for (size_t j = 0; j < num - i - 1; j++) {
+//            void* elem1 = arr + j * size;
+//            void* elem2 = arr + (j + 1) * size;
+//
+//            if (cmp(elem1, elem2) > 0) {
+//                memcpy(temp, elem1, size);
+//                memcpy(elem1, elem2, size);
+//                memcpy(elem2, temp, size);
+//            }
+//        }
+//    }
+//
+//    free(temp);
+//}
+//
+//int compare_int(const void* a, const void* b) {
+//    int x = *(const int*)a;
+//    int y = *(const int*)b;
+//    return (x > y) - (x < y);
+//}
+//
+//int main() {
+//    int arr[] = { 5, 3, 8, 1, 9, 7 };
+//    int n = sizeof(arr) / sizeof(arr[0]);
+//
+//    bubble_sort(arr, n, sizeof(int), compare_int);
+//
+//    printf("排序结果：");
+//    for (int i = 0; i < n; i++) {
+//        printf("%d ", arr[i]);
+//    }
+//    printf("\n");
+//
+//    return 0;
+//}

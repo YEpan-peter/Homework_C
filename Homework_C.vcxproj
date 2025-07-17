@@ -137,6 +137,9 @@
     <ClCompile Include="lmitate.c" />
     <ClCompile Include="定时关机.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="my_string.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
